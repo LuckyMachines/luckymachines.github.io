@@ -1,4 +1,4 @@
-# Lucky Machines AutoLoop Worker
+# Overview
 
 An AutoLoop worker you can run to earn profits and
 

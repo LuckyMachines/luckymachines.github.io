@@ -1,0 +1,11 @@
+input: .
+output: .retype
+url: # Add your website address here
+branding:
+  title: AutoLoop
+  label: Docs
+links:
+  - text: Godwoken
+    link: https://auto-loop-ui-godwoken.vercel.app/
+footer:
+  copyright: "&copy; Copyright {{ year }} Lucky Machines, LLC. All rights reserved."

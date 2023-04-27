@@ -1,4 +1,4 @@
-# Lucky Machines AutoLoop
+# Overview
 
 An on-chain automation loop for your blockchain automation needs. Perfect for on-chain game loops.
 
