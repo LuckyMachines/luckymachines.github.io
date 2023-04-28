@@ -1,3 +1,7 @@
-# What is AutoLoop?
+---
+label: Welcome
+---
 
-About autoloop.
+# Lucky Machines
+
+## [!ref AutoLoop](/AutoLoop/overview.md)
