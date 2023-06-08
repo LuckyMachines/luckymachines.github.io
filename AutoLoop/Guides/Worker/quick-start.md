@@ -20,7 +20,7 @@ yarn
 
 ## Register worker
 
-- Register wallet as AutoLoop worker
+- Register wallet as AutoLoop worker. Make sure you have enough CKB to cover the registration fee (0.001 + tx gas). This fee is refunded immediately, but must be present to verify funds can be transferred to the worker.
 
 ```shell
 yarn register-controller
