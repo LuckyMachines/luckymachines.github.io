@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.736032245253">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.0.3.739574528857">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 2.4.0">
+    <meta name="generator" content="Retype 3.0.3">
 
     <!-- Primary Meta Tags -->
     <title>AutoLoop Integration - Quick Start</title>
@@ -30,11 +30,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../../resources/css/retype.css?v=2.4.0.736032245253" rel="stylesheet" />
+    <link href="../../../../resources/css/retype.css?v=3.0.3.739574528857" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../../resources/js/config.js?v=2.4.0.736032245253" data-turbo-eval="false" defer></script>
-    <script type="text/javascript" src="../../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=2.4.0.736032245253" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../../resources/js/config.js?v=3.0.3.739574528857" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../../resources/js/retype.js?v=3.0.3" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=3.0.3.739574528857" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../../../resources/js/prism.js?v=3.0.3.739574528857" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -162,8 +163,8 @@
             <div class="grow min-w-0 dark:bg-dark-850">
                 <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
                 <div class="flex">
-                    <div class="grow min-w-0 px-6 md:px-16">
-                        <main class="relative pt-6 pb-16">
+                    <div class="min-w-0 p-4 grow md:px-16">
+                        <main class="relative pb-12 lg:pt-2">
                             <div class="docs-markdown" id="docs-content">
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="docs-sidebar-right-toggle"></div>
@@ -182,19 +183,86 @@
         <span>Inherit from AutoLoopCompatible.sol</span>
     </h2>
 </doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-solidity"><code v-pre class="language-solidity">// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.7;
+
+import &quot;@luckymachines/autoloop/contracts/AutoLoopCompatible.sol&quot;;
+
+contract NumberGoUp is AutoLoopCompatible {
+    // ... contract code
+}</code></pre>
+</doc-codeblock></div>
 <doc-anchor-target id="add-required-methods">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#add-required-methods">#</doc-anchor-trigger>
         <span>Add required methods</span>
     </h2>
 </doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-solidity"><code v-pre class="language-solidity">function shouldProgressLoop()
+    external
+    view
+    returns (bool loopIsReady, bytes memory progressWithData)
+{
+    loopIsReady = (block.timestamp - lastTimeStamp) &gt; interval;
+    // pass a loop ID to avoid running the same update twice
+    progressWithData = bytes(abi.encode(_loopID));
+}
+
+function progressLoop(bytes calldata progressWithData) external {
+    // decode the data sent from shouldProgressLoop()
+    uint256 loopID = abi.decode(progressWithData, (uint256));
+
+    // re-check logic
+    if ((block.timestamp - lastTimeStamp) &gt; interval &amp;&amp; loopID == _loopID) {
+        updateNumber();
+        ++_loopID;
+    }
+}</code></pre>
+</doc-codeblock></div>
 <doc-anchor-target id="register-autoloop-compatible-contract">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#register-autoloop-compatible-contract">#</doc-anchor-trigger>
         <span>Register AutoLoop compatible contract</span>
     </h2>
 </doc-anchor-target>
-<p><a href="https://auto-loop-ui-godwoken.vercel.app/">AutoLoop dashboard</a></p>
+<p>Open your <a href="https://auto-loop-ui-godwoken.vercel.app/">AutoLoop dashboard</a></p>
+<doc-anchor-target id="connect-your-wallet">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#connect-your-wallet">#</doc-anchor-trigger>
+        <span>Connect your wallet</span>
+    </h3>
+</doc-anchor-target>
+<p><em>Insert Screenshot Here</em></p>
+<doc-anchor-target id="select-register-contract">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#select-register-contract">#</doc-anchor-trigger>
+        <span>Select Register Contract</span>
+    </h3>
+</doc-anchor-target>
+<p><em>Insert Screenshot Here</em></p>
+<doc-anchor-target id="choose-settings-and-funding-amount">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#choose-settings-and-funding-amount">#</doc-anchor-trigger>
+        <span>Choose Settings and Funding Amount</span>
+    </h3>
+</doc-anchor-target>
+<p><em>Insert Screenshot Here</em></p>
+<doc-anchor-target id="register-contract">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#register-contract">#</doc-anchor-trigger>
+        <span>Register Contract</span>
+    </h3>
+</doc-anchor-target>
+<p><em>Insert Screenshot Here</em></p>
+<doc-anchor-target id="manage-registered-contracts">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#manage-registered-contracts">#</doc-anchor-trigger>
+        <span>Manage Registered Contracts</span>
+    </h3>
+</doc-anchor-target>
+<p><em>Insert Screenshot Here</em></p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -261,6 +329,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script>window.__DOCS__ = { "title": "Quick Start", level: 4, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
+    <script>window.__DOCS__ = { "title": "Quick Start", level: 4, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false }</script>
 </body>
 </html>
