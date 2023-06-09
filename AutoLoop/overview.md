@@ -12,3 +12,7 @@ The AutoLoop network is maintained by worker nodes. You can support the health o
 ### [!ref Add Automation to Your Project](/AutoLoop/Guides/Integrate/quick-start.md)
 
 ### [!ref Run a Worker](/AutoLoop/Guides/Worker/quick-start.md)
+
+## Manage your AutoLoop compatible contracts
+
+**[AutoLoop Dashboard](https://auto-loop-ui-godwoken.vercel.app/)**
