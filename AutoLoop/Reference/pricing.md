@@ -30,6 +30,4 @@ fee = [gasUsed * tx.gasPrice * (1 + feeRate) + (81611 * tx.gasPrice)]
 
 This formula allows you to estimate the cost of running our service, including both the gas costs and the AutoLoop fees.
 
-Note that the total cost of using AutoLoop, i.e., executing a function or "progressing the loop," will be debited from your balance. Hence, always maintain an adequate amount of Ether deposited to cover both the gas costs and fees.
-
-Enjoy the convenience and power of automated smart contract execution with AutoLoop!
+Note that the total cost of using AutoLoop, i.e., executing a function or "progressing the loop," will be debited from your balance so always maintain an adequate amount of Ether deposited to cover both the gas costs and fees.
