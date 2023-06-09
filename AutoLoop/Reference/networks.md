@@ -14,11 +14,11 @@ label: Networks
 
 # Parameters
 
-FeeRate % (baseFee): This percentage compensates the AutoLoop Network for maintaining you automation loop. Every time your contract executes progressLoop(), the contract balance is reduced by the cost plus this fee rate percentage.
+**FeeRate % (baseFee):** This percentage compensates the AutoLoop Network for maintaining you automation loop. Every time your contract executes progressLoop(), the contract balance is reduced by the cost plus this fee rate percentage.
 
-Default Gas Limit (maxGasDefault): The maximum amount of gas that can be used by the client contract’s progressLoop() function + fees. You can set an upper limit on each contract from the AutoLoop dashboard, but this number must not exceed gasLimit() on the AutoLoop contract.
+**Default Gas Limit (maxGasDefault):** The maximum amount of gas that can be used by the client contract’s progressLoop() function + fees. You can set an upper limit on each contract from the AutoLoop dashboard, but this number must not exceed gasLimit() on the AutoLoop contract.
 
-Default Max Gas Price (maxGasPriceDefault): The maximum gas price that can be used by the client contract’s performUpkeep function for the on-chain transaction. You can set an upper limit on your upkeep during registration, but this number must not exceed gasThreshold() on the AutoLoop contract.
+**Default Max Gas Price (maxGasPriceDefault):** The maximum gas price that can be used by the client contract’s performUpkeep function for the on-chain transaction. You can set an upper limit on your upkeep during registration, but this number must not exceed gasThreshold() on the AutoLoop contract.
 
 # Network Settings
 
