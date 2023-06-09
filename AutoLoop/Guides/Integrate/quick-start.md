@@ -4,7 +4,7 @@ label: Quick Start
 
 # AutoLoop Integration - Quick Start
 
-[![AutoLoop Quick Start Video](https://img.youtube.com/vi/UZ3DOq8zsWc/hqdefault.jpg)](https://youtu.be/UZ3DOq8zsWc)
+[!embed](https://www.youtube.com/embed/UZ3DOq8zsWc)
 
 ## Inherit from AutoLoopCompatible.sol
 
