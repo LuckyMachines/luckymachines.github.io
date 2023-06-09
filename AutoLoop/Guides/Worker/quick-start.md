@@ -4,7 +4,7 @@ label: Quick Start
 
 # Run a Worker - Quick Start
 
-_Insert Video Here_
+[![AutoLoop Worker Quick Start Video](https://img.youtube.com/vi/LvE5kftHXKk/hqdefault.jpg)](https://youtu.be/LvE5kftHXKk)
 
 ## Clone autoloop-worker repo
 
