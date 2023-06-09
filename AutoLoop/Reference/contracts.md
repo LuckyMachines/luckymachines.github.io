@@ -1,5 +1,0 @@
----
-label: Contracts
----
-
-# Contracts
