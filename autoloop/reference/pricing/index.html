@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.0.3.739650273766">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.0.3.739653290004">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.0.3">
 
     <!-- Primary Meta Tags -->
-    <title>Pricing</title>
-    <meta name="title" content="Pricing">
+    <title>AutoLoop User Guide</title>
+    <meta name="title" content="AutoLoop User Guide">
+    <meta name="description" content="Welcome to AutoLoop, your solution for automated contract progression services on the Ethereum network." />
 
     <!-- Canonical -->
     <link rel="canonical" href="/autoloop/reference/pricing/" />
@@ -18,20 +19,22 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="/autoloop/reference/pricing/">
-    <meta property="og:title" content="Pricing">
+    <meta property="og:title" content="AutoLoop User Guide">
+    <meta property="og:description" content="Welcome to AutoLoop, your solution for automated contract progression services on the Ethereum network.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="/autoloop/reference/pricing/">
-    <meta property="twitter:title" content="Pricing">
+    <meta property="twitter:title" content="AutoLoop User Guide">
+    <meta property="twitter:description" content="Welcome to AutoLoop, your solution for automated contract progression services on the Ethereum network.">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.0.3.739650273766" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=3.0.3.739653290004" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=3.0.3.739650273766" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=3.0.3.739653290004" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=3.0.3" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=3.0.3.739650273766" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=3.0.3.739653290004" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -166,12 +169,49 @@
                                 <div id="docs-sidebar-right-toggle"></div>
                 
                                 <!-- Page content  -->
-<doc-anchor-target id="pricing" class="break-words">
+<doc-anchor-target id="autoloop-user-guide" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#pricing">#</doc-anchor-trigger>
-        <span>Pricing</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#autoloop-user-guide">#</doc-anchor-trigger>
+        <span>AutoLoop User Guide</span>
     </h1>
 </doc-anchor-target>
+<p>Welcome to AutoLoop, your solution for automated contract progression services on the Ethereum network. This guide outlines key aspects of the user interface and how you can manage your transactions effectively.</p>
+<doc-anchor-target id="maximum-gas">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#maximum-gas">#</doc-anchor-trigger>
+        <span>Maximum Gas</span>
+    </h2>
+</doc-anchor-target>
+<p>AutoLoop enables you to define the maximum amount of gas for a transaction. It is essential to set this value sufficiently high to ensure your transaction gets successfully processed. The maximum gas value specifies the most computational work you&#x27;re willing to expend to add a transaction to the Ethereum blockchain.</p>
+<doc-anchor-target id="gas-price">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#gas-price">#</doc-anchor-trigger>
+        <span>Gas Price</span>
+    </h2>
+</doc-anchor-target>
+<p>Beyond the maximum gas limit, you can stipulate the maximum gas price as well. Our worker nodes continually work to provide you the best possible gas price, always staying within the confines of your defined limit. Bear in mind, Ethereum&#x27;s gas prices can fluctuate, so allowing a higher limit offers more adaptability.</p>
+<doc-anchor-target id="depositing-and-withdrawing-gas">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#depositing-and-withdrawing-gas">#</doc-anchor-trigger>
+        <span>Depositing and Withdrawing Gas</span>
+    </h2>
+</doc-anchor-target>
+<p>AutoLoop facilitates depositing Ether into your account, which can cover the gas costs for your transactions. You can also withdraw your deposited Ether as per your requirements. Remember, each transaction you execute through AutoLoop consumes gas, so ensure you have an adequate deposit of Ether to manage these costs.</p>
+<doc-anchor-target id="pricing">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#pricing">#</doc-anchor-trigger>
+        <span>Pricing</span>
+    </h2>
+</doc-anchor-target>
+<p>AutoLoop pricing leverages the Ethereum network&#x27;s gas system. Each transaction executed via AutoLoop uses gas, and the total cost corresponds to the gas consumed multiplied by the gas price.</p>
+<p>AutoLoop applies a service fee to the contract. This total fee is a percentage of the gas used by the transaction, divided between the controller (the entity executing the function or &quot;progressing the loop&quot;) and the AutoLoop protocol itself. These proportions are determined by the CONTROLLER_FEE_PORTION and PROTOCOL_FEE_PORTION variables.</p>
+<p>For a detailed understanding of the cost, consider this formula:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">fee = [gasUsed * tx.gasPrice * (1 + feeRate) + (81611 * tx.gasPrice)]</code></pre>
+</doc-codeblock></div>
+<p>This formula allows you to estimate the cost of running our service, including both the gas costs and the AutoLoop fees.</p>
+<p>Note that the total cost of using AutoLoop, i.e., executing a function or &quot;progressing the loop,&quot; will be debited from your balance. Hence, always maintain an adequate amount of Ether deposited to cover both the gas costs and fees.</p>
+<p>Enjoy the convenience and power of automated smart contract execution with AutoLoop!</p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -181,16 +221,23 @@
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../autoloop/reference/contracts/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../autoloop/guides/worker/quick-start/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">Contracts</span>
+                                                <span class="block mt-1">Quick Start</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../autoloop/reference/networks/">
+                                            <span>
+                                                <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
+                                                <span class="block mt-1">Networks</span>
+                                            </span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                        </a>
                                     </div>
                                 </nav>
                             </footer>
@@ -231,6 +278,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script>window.__DOCS__ = { "title": "Pricing", level: 3, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
+    <script>window.__DOCS__ = { "title": "AutoLoop User Guide", level: 3, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
 </body>
 </html>

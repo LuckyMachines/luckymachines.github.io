@@ -3,35 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.0.3.739650273766">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.0.3.739653290004">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.0.3">
 
     <!-- Primary Meta Tags -->
-    <title>Contracts</title>
-    <meta name="title" content="Contracts">
+    <title>Supported Networks</title>
+    <meta name="title" content="Supported Networks">
+    <meta name="description" content="Ethereum" />
 
     <!-- Canonical -->
-    <link rel="canonical" href="/autoloop/reference/contracts/" />
+    <link rel="canonical" href="/autoloop/reference/networks/" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="/autoloop/reference/contracts/">
-    <meta property="og:title" content="Contracts">
+    <meta property="og:url" content="/autoloop/reference/networks/">
+    <meta property="og:title" content="Supported Networks">
+    <meta property="og:description" content="Ethereum">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="/autoloop/reference/contracts/">
-    <meta property="twitter:title" content="Contracts">
+    <meta property="twitter:url" content="/autoloop/reference/networks/">
+    <meta property="twitter:title" content="Supported Networks">
+    <meta property="twitter:description" content="Ethereum">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.0.3.739650273766" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=3.0.3.739653290004" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=3.0.3.739650273766" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=3.0.3.739653290004" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=3.0.3" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=3.0.3.739650273766" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=3.0.3.739653290004" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -166,12 +169,135 @@
                                 <div id="docs-sidebar-right-toggle"></div>
                 
                                 <!-- Page content  -->
-<doc-anchor-target id="contracts" class="break-words">
+<doc-anchor-target id="supported-networks" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#contracts">#</doc-anchor-trigger>
-        <span>Contracts</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#supported-networks">#</doc-anchor-trigger>
+        <span>Supported Networks</span>
     </h1>
 </doc-anchor-target>
+<ul>
+<li>Ethereum
+<ul>
+<li>Sepolia testnet</li>
+</ul>
+</li>
+<li>Polygon
+<ul>
+<li>Mumbai testnet</li>
+</ul>
+</li>
+<li>Godwoken
+<ul>
+<li>Testnet</li>
+<li>Mainnet</li>
+</ul>
+</li>
+</ul>
+<doc-anchor-target id="parameters">
+    <h1>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#parameters">#</doc-anchor-trigger>
+        <span>Parameters</span>
+    </h1>
+</doc-anchor-target>
+<p>FeeRate % (baseFee): This percentage compensates the AutoLoop Network for maintaining you automation loop. Every time your contract executes progressLoop(), the contract balance is reduced by the cost plus this fee rate percentage.</p>
+<p>Default Gas Limit (maxGasDefault): The maximum amount of gas that can be used by the client contract’s progressLoop() function + fees. You can set an upper limit on each contract from the AutoLoop dashboard, but this number must not exceed gasLimit() on the AutoLoop contract.</p>
+<p>Default Max Gas Price (maxGasPriceDefault): The maximum gas price that can be used by the client contract’s performUpkeep function for the on-chain transaction. You can set an upper limit on your upkeep during registration, but this number must not exceed gasThreshold() on the AutoLoop contract.</p>
+<doc-anchor-target id="network-settings">
+    <h1>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#network-settings">#</doc-anchor-trigger>
+        <span>Network Settings</span>
+    </h1>
+</doc-anchor-target>
+<doc-anchor-target id="godwoken">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#godwoken">#</doc-anchor-trigger>
+        <span>Godwoken</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="godwoken-testnet">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#godwoken-testnet">#</doc-anchor-trigger>
+        <span>Godwoken Testnet</span>
+    </h3>
+</doc-anchor-target>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Item</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AutoLoop Address</td>
+<td>&quot;0xef431960720c9bE6d37FF17E0d0Ce016c4072543&quot;</td>
+</tr>
+<tr>
+<td>Registry Address</td>
+<td>&quot;0x1C03fABf5bceB4555B4B1343C74d7143c698D551&quot;</td>
+</tr>
+<tr>
+<td>Registrar Address</td>
+<td>&quot;0x1D4c4a27077636E29167aaEF6555c6dbf54284F3&quot;</td>
+</tr>
+<tr>
+<td>Fee Rate</td>
+<td>70%</td>
+</tr>
+<tr>
+<td>Default Gas Limit</td>
+<td>1,000,000</td>
+</tr>
+<tr>
+<td>Default Max Gas Price</td>
+<td>40,000 gwei</td>
+</tr>
+</tbody>
+</table>
+</div>
+<doc-anchor-target id="godwoken-mainnet">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#godwoken-mainnet">#</doc-anchor-trigger>
+        <span>Godwoken Mainnet</span>
+    </h3>
+</doc-anchor-target>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Item</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AutoLoop Address</td>
+<td>&quot;0x000&quot;</td>
+</tr>
+<tr>
+<td>Registry Address</td>
+<td>&quot;0x000&quot;</td>
+</tr>
+<tr>
+<td>Registrar Address</td>
+<td>&quot;0x000&quot;</td>
+</tr>
+<tr>
+<td>Fee Rate</td>
+<td>70%</td>
+</tr>
+<tr>
+<td>Default Gas Limit</td>
+<td>1,000,000</td>
+</tr>
+<tr>
+<td>Default Max Gas Price</td>
+<td>40,000 gwei</td>
+</tr>
+</tbody>
+</table>
+</div>
 
                                 
                                 <!-- Required only on API pages -->
@@ -181,23 +307,16 @@
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../autoloop/guides/worker/quick-start/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../autoloop/reference/pricing/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">Quick Start</span>
+                                                <span class="block mt-1">Auto​Loop User Guide</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../autoloop/reference/pricing/">
-                                            <span>
-                                                <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">Pricing</span>
-                                            </span>
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
-                                        </a>
                                     </div>
                                 </nav>
                             </footer>
@@ -238,6 +357,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script>window.__DOCS__ = { "title": "Contracts", level: 3, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
+    <script>window.__DOCS__ = { "title": "Networks", level: 3, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
 </body>
 </html>
