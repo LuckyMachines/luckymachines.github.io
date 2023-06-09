@@ -1,6 +1,8 @@
-# AutoLoop User Guide
+---
+label: Pricing
+---
 
-Welcome to AutoLoop, your solution for automated contract progression services on the Ethereum network. This guide outlines key aspects of the user interface and how you can manage your transactions effectively.
+# AutoLoop Pricing
 
 ## Maximum Gas
 
