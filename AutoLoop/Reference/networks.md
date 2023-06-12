@@ -4,13 +4,11 @@ label: Networks
 
 # Supported Networks
 
-- Ethereum
-  - Sepolia testnet
-- Polygon
-  - Mumbai testnet
-- Godwoken
-  - Testnet
-  - Mainnet
+- [Godwoken](#godwoken)
+  - [Testnet](#godwoken-testnet)
+  - [Mainnet](#godwoken-mainnet)
+- [Ethereum](#ethereum)
+  - [Testnet](#sepolia-testnet)
 
 # Parameters
 
@@ -26,22 +24,35 @@ label: Networks
 
 ### Godwoken Testnet
 
-| Item                  | Value                                        |
+|                       |                                              |
 | --------------------- | -------------------------------------------- |
-| AutoLoop Address      | "0xef431960720c9bE6d37FF17E0d0Ce016c4072543" |
-| Registry Address      | "0x1C03fABf5bceB4555B4B1343C74d7143c698D551" |
-| Registrar Address     | "0x1D4c4a27077636E29167aaEF6555c6dbf54284F3" |
+| AutoLoop Address      | "0x231131411F3E0FEa07fd3fAC6f24C87aEE8a57e9" |
+| Registry Address      | "0x1eB69dc3AC3D5BfE159930735a0E248b8959A659" |
+| Registrar Address     | "0x57D884821754CB5d5A73ff142127b7182e4834D9" |
 | Fee Rate              | 70%                                          |
 | Default Gas Limit     | 1,000,000                                    |
 | Default Max Gas Price | 40,000 gwei                                  |
 
 ### Godwoken Mainnet
 
-| Item                  | Value       |
-| --------------------- | ----------- |
-| AutoLoop Address      | "0x000"     |
-| Registry Address      | "0x000"     |
-| Registrar Address     | "0x000"     |
-| Fee Rate              | 70%         |
-| Default Gas Limit     | 1,000,000   |
-| Default Max Gas Price | 40,000 gwei |
+|                       |                                              |
+| --------------------- | -------------------------------------------- |
+| AutoLoop Address      | "0xBB2E62b3c50C9087f9db6f991148B7871Bd3dBC0" |
+| Registry Address      | "0x233641cFC9b8D01618c5982b5B4511e855Ae8213" |
+| Registrar Address     | "0xCEb3F8A47b694EeB1970be1B4aD4003eB0a7edEA" |
+| Fee Rate              | 70%                                          |
+| Default Gas Limit     | 1,000,000                                    |
+| Default Max Gas Price | 40,000 gwei                                  |
+
+## Ethereum
+
+### Sepolia Testnet
+
+|                       |                                              |
+| --------------------- | -------------------------------------------- |
+| AutoLoop Address      | "0xe53C418aA170abB87D6449403EA70FD6C82Bc9c2" |
+| Registry Address      | "0xB9B408F892bCE310Ebbf257f932D461CA81c4738" |
+| Registrar Address     | "0x86c45946b0dDF290d8ab9931C2d09a26481d4e72" |
+| Fee Rate              | 15%                                          |
+| Default Gas Limit     | 1,000,000                                    |
+| Default Max Gas Price | 100 gwei                                     |
