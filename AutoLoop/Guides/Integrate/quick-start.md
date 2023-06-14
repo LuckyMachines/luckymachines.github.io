@@ -50,20 +50,20 @@ Open your [AutoLoop dashboard](https://auto-loop-ui-godwoken.vercel.app/)
 
 ### Connect your wallet
 
-_Insert Screenshot Here_
+![](/images/al/click-connect.png)
 
 ### Select Register Contract
 
-_Insert Screenshot Here_
+![](/images/al/click-register.png)
 
 ### Choose Settings and Funding Amount
 
-_Insert Screenshot Here_
+![](/images/al/registration-details.png)
 
 ### Register Contract
 
-_Insert Screenshot Here_
+![](/images/al/click-final-register.png)
 
 ### Manage Registered Contracts
 
-_Insert Screenshot Here_
+![Click on contract address to manage](/images/al/click-contract-address.png)
