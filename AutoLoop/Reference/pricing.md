@@ -25,7 +25,7 @@ AutoLoop applies a service fee to the contract. This total fee is a percentage o
 For a detailed understanding of the cost, consider this formula:
 
 ```
-fee = [gasUsed * tx.gasPrice * (1 + feeRate) + (81611 * tx.gasPrice)]
+fee = [gasUsed * tx.gasPrice * (1 + feeRate) + (149440 * tx.gasPrice)]
 ```
 
 This formula allows you to estimate the cost of running our service, including both the gas costs and the AutoLoop fees.
