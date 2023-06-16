@@ -6,6 +6,8 @@ branding:
   logo: images/lmlogo_full.png
 links:
   - text: Godwoken
-    link: https://auto-loop-ui-godwoken.vercel.app/
+    link: https://autoloop-godwoken.luckymachines.io/
+  - text: Godwoken Testnet
+    link: https://autoloop-godwoken-testnet.luckymachines.io/
 footer:
   copyright: "&copy; Copyright {{ year }} Lucky Machines, LLC. All rights reserved."
