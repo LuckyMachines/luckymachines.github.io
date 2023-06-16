@@ -15,4 +15,7 @@ The AutoLoop network is maintained by worker nodes. You can support the health o
 
 ## Manage your AutoLoop compatible contracts
 
-**[AutoLoop Dashboard](https://auto-loop-ui-godwoken.vercel.app/)**
+**AutoLoop Dashboard**
+
+- [Godwoken](https://autoloop-godwoken.luckymachines.io/)
+- [Godwoken Testnet](https://autoloop-godwoken-testnet.luckymachines.io/)

@@ -46,7 +46,10 @@ function progressLoop(bytes calldata progressWithData) external {
 
 ## Register AutoLoop compatible contract
 
-Open your [AutoLoop dashboard](https://auto-loop-ui-godwoken.vercel.app/)
+Open the AutoLoop Dashboard:
+
+- [Godwoken](https://autoloop-godwoken.luckymachines.io/)
+- [Godwoken Testnet](https://autoloop-godwoken-testnet.luckymachines.io/)
 
 ### Connect your wallet
 
