@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.0.3.740093179720">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.0.3.740248365942">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.0.3">
@@ -11,7 +11,7 @@
     <!-- Primary Meta Tags -->
     <title>AutoLoop Integration - Quick Start</title>
     <meta name="title" content="AutoLoop Integration - Quick Start">
-    <meta name="description" content="Open your AutoLoop dashboard" />
+    <meta name="description" content="Open the AutoLoop Dashboard:" />
 
     <!-- Canonical -->
     <link rel="canonical" href="/autoloop/guides/integrate/quick-start/" />
@@ -20,24 +20,24 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="/autoloop/guides/integrate/quick-start/">
     <meta property="og:title" content="AutoLoop Integration - Quick Start">
-    <meta property="og:description" content="Open your AutoLoop dashboard">
+    <meta property="og:description" content="Open the AutoLoop Dashboard:">
     <meta property="og:image" content="/images/al/click-connect.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="/autoloop/guides/integrate/quick-start/">
     <meta property="twitter:title" content="AutoLoop Integration - Quick Start">
-    <meta property="twitter:description" content="Open your AutoLoop dashboard">
+    <meta property="twitter:description" content="Open the AutoLoop Dashboard:">
     <meta property="twitter:image" content="/images/al/click-connect.png">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../../resources/css/retype.css?v=3.0.3.740093179720" rel="stylesheet" />
+    <link href="../../../../resources/css/retype.css?v=3.0.3.740248365942" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../../resources/js/config.js?v=3.0.3.740093179720" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../../resources/js/config.js?v=3.0.3.740248365942" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../../resources/js/retype.js?v=3.0.3" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=3.0.3.740093179720" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../../../resources/js/prism.js?v=3.0.3.740093179720" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=3.0.3.740248365942" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../../../resources/js/prism.js?v=3.0.3.740248365942" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -68,7 +68,10 @@
                     <nav class="hidden md:flex">
                         <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
                             <li class="mr-6">
-                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://auto-loop-ui-godwoken.vercel.app/">Godwoken</a>
+                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://autoloop-godwoken.luckymachines.io/">Godwoken</a>
+                            </li>
+                            <li class="mr-6">
+                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://autoloop-godwoken-testnet.luckymachines.io/">Godwoken Testnet</a>
                             </li>
         
                         </ul>
@@ -147,7 +150,10 @@
                             <nav>
                                 <ul class="flex flex-wrap justify-center items-center">
                                     <li class="mr-6">
-                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://auto-loop-ui-godwoken.vercel.app/">Godwoken</a>
+                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://autoloop-godwoken.luckymachines.io/">Godwoken</a>
+                                    </li>
+                                    <li class="mr-6">
+                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://autoloop-godwoken-testnet.luckymachines.io/">Godwoken Testnet</a>
                                     </li>
             
                                 </ul>
@@ -235,7 +241,11 @@ function progressLoop(bytes calldata progressWithData) external {
         <span>Register AutoLoop compatible contract</span>
     </h2>
 </doc-anchor-target>
-<p>Open your <a href="https://auto-loop-ui-godwoken.vercel.app/">AutoLoop dashboard</a></p>
+<p>Open the AutoLoop Dashboard:</p>
+<ul>
+<li><a href="https://autoloop-godwoken.luckymachines.io/">Godwoken</a></li>
+<li><a href="https://autoloop-godwoken-testnet.luckymachines.io/">Godwoken Testnet</a></li>
+</ul>
 <doc-anchor-target id="connect-your-wallet">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#connect-your-wallet">#</doc-anchor-trigger>
